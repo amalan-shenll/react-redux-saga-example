@@ -12,7 +12,7 @@ const Home = (props) => {
       Home
       <button onClick={() => dispatch(fetchCountry())}>Load Countries!</button>
       {countries && countries.map((item, i) => {
-        return <span key={i}>{item.name}&nbsp;//</span>
+        return <div key={i}>{item.name}</div>
       })}
     </div>
   )

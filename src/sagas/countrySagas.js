@@ -1,14 +1,9 @@
-import { call, put, takeEvery } from 'redux-saga/effects';
-import { FETCH_COUNTRIES } from '../const/ActionTypes';
+import { call, put } from 'redux-saga/effects';
 import {
   requestCountry,
   requestCountrySuccess,
   requestCountryError
 } from '../actions/countryActions';
-
-export function* watchFetchCountry() {
-  yield takeEvery(FETCH_COUNTRIES, fetchContryAsync);
-}
 
 export function* fetchContryAsync() {
   try {
